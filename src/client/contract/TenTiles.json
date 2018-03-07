@@ -1,0 +1,281 @@
+{
+  "address": "0x5ff75b70d3decd7f09bdf8cd4ba1b5411628d05b",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "isTileOwner",
+      "outputs": [
+        {
+          "name": "isIndeed",
+          "type": "bool"
+        },
+        {
+          "name": "index",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint8"
+        }
+      ],
+      "name": "getHistory",
+      "outputs": [
+        {
+          "name": "users",
+          "type": "address[]"
+        },
+        {
+          "name": "dates",
+          "type": "uint256[]"
+        },
+        {
+          "name": "prices",
+          "type": "uint256[]"
+        },
+        {
+          "name": "actions",
+          "type": "bytes32[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "mostSent",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tilesList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "tileStructs",
+      "outputs": [
+        {
+          "name": "round",
+          "type": "uint8"
+        },
+        {
+          "name": "step",
+          "type": "uint256"
+        },
+        {
+          "name": "image",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "link",
+          "type": "string"
+        },
+        {
+          "name": "settings",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "richest",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "becomeRichest",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint8"
+        },
+        {
+          "name": "_image",
+          "type": "string"
+        },
+        {
+          "name": "_text",
+          "type": "string"
+        },
+        {
+          "name": "_link",
+          "type": "string"
+        },
+        {
+          "name": "_settings",
+          "type": "string"
+        }
+      ],
+      "name": "buyTile",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_index",
+          "type": "uint8"
+        },
+        {
+          "name": "_image",
+          "type": "string"
+        },
+        {
+          "name": "_text",
+          "type": "string"
+        },
+        {
+          "name": "_link",
+          "type": "string"
+        },
+        {
+          "name": "_settings",
+          "type": "string"
+        }
+      ],
+      "name": "changeTileOwner",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newMostSent",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMostSent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    }
+  ]
+}
