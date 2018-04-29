@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Col} from 'react-bootstrap';
+import {Col} from 'reactstrap';
 import stubImg from '../images/stub.png';
 
 export class Tile extends Component {
@@ -12,7 +12,7 @@ export class Tile extends Component {
     render() {
         if(this.props.tile.settings === ''){
             return (
-                <Col className="col-lg-5ths tile view view-ninth">
+                <Col className="tile view view-ninth">
                     <img src={stubImg} />
                     <div className="mask mask-1">&nbsp;</div>
                     <div className="mask mask-2">&nbsp;</div>

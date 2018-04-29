@@ -25,6 +25,8 @@
 @include font-face(PhantomFingers, '../fonts/phantom-fingers');
 @include font-face(TimesNewRoman, '../fonts/times-new-roman');
 
+
+
 body{background: #fff;}
 header{
   padding: 15px 0;
@@ -274,7 +276,9 @@ header{
     li{
       margin-right: 20px;
       a{
-        &[aria-selected="true"] {
+        padding: 0;
+        cursor: pointer;
+        &.active {
           .wrapper-icon{
             box-shadow: 0 2px 4px 1px rgba(184,184,184,.75);
           }
@@ -312,8 +316,14 @@ header{
     font-size: 16px;
     color: #717171;
   }
+  .has-error{
+    display: block;
+    font-size: 12px;
+    padding: 5px 0;
+    color: darkred;
+  }
 }
-#sketch_tools{margin: 0;}
+
 select#font_family{width: 215px;}
 textarea#i-text{width: 215px;resize: none;}
 .color-picker{
@@ -371,35 +381,34 @@ textarea#i-text{width: 215px;resize: none;}
 #crop_mode{
   margin-right: 140px;
 }
-
-
-
-
-
-
-
-
-
+.tab-pane {
+  .row{
+    margin-bottom: 25px;
+  }
+  &.active{
+    .color-picker{
+      .btn{
+        &.btn-secondary{
+          font-size: 14px;
+          padding: 0;
+          line-height: 0;
+          display: inline-block;
+          color: darkred;
+          background: white;
+          border: none;
+          position: relative;
+          left: 10px;
+          bottom: 8px;
+        }
+      }
+    }
+  }
+}
 
 .fade{
   &.in{
     opacity: 1;
   }
-}
-
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.col-xs-5ths {
-  width: 20%;
-  float: left;
 }
 
 @media (min-width: 768px) {
@@ -411,13 +420,6 @@ textarea#i-text{width: 215px;resize: none;}
 
 @media (min-width: 992px) {
   .col-md-5ths {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-lg-5ths {
     width: 20%;
     float: left;
   }

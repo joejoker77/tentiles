@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid} from 'react-bootstrap';
+import {Container} from 'reactstrap';
 import _ from 'lodash';
 import Blockchain from '../utils/blockchain';
 import TransactionsStorage from '../utils/transactions-storage';
@@ -114,7 +114,7 @@ export default class Home extends React.Component {
     render() {
         if(this.state.tiles.length > 0 && !this.state.activeEditor) {
             return (
-                <Grid fluid={true}>
+                <Container fluid={true}>
                     <Header/>
                     <Tiles modalHandler={this.handleOpenModal} tiles={this.state.tiles} />
                     <ReactModal isOpen={this.state.showModal} style={customStyles} >
@@ -126,18 +126,18 @@ export default class Home extends React.Component {
                             openEditor={this.openEditor}
                         />
                     </ReactModal>
-                </Grid>
+                </Container>
             );
         }else if(this.state.tiles.length > 0 && this.state.activeEditor){
             return(
-                <Grid fluid={true}>
+                <Container fluid={true}>
                     <Header/>
                     <Editor
                         canvasSize={this.state.tileSize}
                         index={this.state.activeTile}
                         settings={this.state.settings}
                     />
-                </Grid>
+                </Container>
             );
         }else{
             return null;
